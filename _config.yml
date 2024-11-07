@@ -135,3 +135,9 @@ feed:
   icon: icon.png
   autodiscovery: true
   template:
+
+# 图片懒加载
+lazyload: 
+	enable: true # 是否开启图片懒加载 
+	onlypost: false # 是否只对文章的图片做懒加载 
+	loadingImg: /medias/loading.gif #显示的图片
