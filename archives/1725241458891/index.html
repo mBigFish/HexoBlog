@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>【开发】网站批量检测工具 V1.0.2 | 大鱼博客</title><meta name="author" content="mBigFish"><meta name="copyright" content="mBigFish"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="网站批量检测工具 V1.0.2 开发背景 在本人实习期间，面临了对大量本地网站进行备案信息和内容合规性检查的挑战。这些网站的数量巨大，而手动检查方法耗时且容易遗漏，特别是在频繁变化的网络环境中。同时，由于网站运营状况的不断变化，以及黑客入侵的不定时等不可预测的情况，需要及时而有效地监测网站状态。 面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【开发】网站批量检测工具 V1.0.2">
+<meta property="og:url" content="http://blog.mbigfish.com/archives/1725241458891/index.html">
+<meta property="og:site_name" content="大鱼博客">
+<meta property="og:description" content="网站批量检测工具 V1.0.2 开发背景 在本人实习期间，面临了对大量本地网站进行备案信息和内容合规性检查的挑战。这些网站的数量巨大，而手动检查方法耗时且容易遗漏，特别是在频繁变化的网络环境中。同时，由于网站运营状况的不断变化，以及黑客入侵的不定时等不可预测的情况，需要及时而有效地监测网站状态。 面">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.dmoe.cc/random.php">
+<meta property="article:published_time" content="2024-09-02T01:44:18.000Z">
+<meta property="article:modified_time" content="2024-11-07T06:39:54.179Z">
+<meta property="article:author" content="mBigFish">
+<meta property="article:tag" content="开发">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.dmoe.cc/random.php"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.mbigfish.com/archives/1725241458891/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '【开发】网站批量检测工具 V1.0.2',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-11-07 14:39:54'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/../mainimg/tx.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas  fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas  fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas  fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://www.dmoe.cc/random.php);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/../mainimg/log.png" alt="Logo"></a><a class="nav-page-title" href="/"><span class="site-name">【开发】网站批量检测工具 V1.0.2</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas  fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas  fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas  fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">【开发】网站批量检测工具 V1.0.2</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-09-02T01:44:18.000Z" title="发表于 2024-09-02 09:44:18">2024-09-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-07T06:39:54.179Z" title="更新于 2024-11-07 14:39:54">2024-11-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">工具使用</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="网站批量检测工具-V1-0-2"><a href="#网站批量检测工具-V1-0-2" class="headerlink" title="网站批量检测工具 V1.0.2"></a>网站批量检测工具 V1.0.2</h1><h2 id="开发背景"><a href="#开发背景" class="headerlink" title="开发背景"></a>开发背景</h2><p>在本人实习期间，面临了对大量本地网站进行备案信息和内容合规性检查的挑战。这些网站的数量巨大，而手动检查方法耗时且容易遗漏，特别是在频繁变化的网络环境中。同时，由于网站运营状况的不断变化，以及黑客入侵的不定时等不可预测的情况，需要及时而有效地监测网站状态。</p>
+<p>面对这一实际问题，决定开发一款工具来提高这一流程的效率和准确性。这款工具旨在自动化 ICP 备案信息和公安备案信息的检测，能够使网信工作者快速了解网站的合规性。通过定期的批量检测，网信工作者可以更及时地发现任何潜在的违规情况，包括色情、赌博等违法内容，从而使网工作者更好地维护网络安全。</p>
+<p>*这个项目的开发背景源于对网站管理工作的实际需求，目的是为了提高工作效率、减轻人工负担，同时保障了网站合规运营的要求。通过自动化的方式，使得原本耗时繁琐的检查过程变得更为简便和迅速，同时减少了人为错误的可能性。这不仅对网信办的工作有着积极的促进作用，也为其他类似需求的机构和个人提供了一种高效的解决方案。</p>
+<p>我相信，通过不断地优化和完善，这款工具将成为网站合规运营管理者的重要助手，<strong>同时也为维护网络空间的清朗和安全贡献一份力量。</strong></p>
+<h2 id="项目概述"><a href="#项目概述" class="headerlink" title="项目概述"></a>项目概述</h2><p><strong>该项目是一个基于 PySide6 和 python 异步编程及多线程的网站批量检测工具。通过读取 Excel 文件中的 URL 列表，使用多线程和异步任务进行网站信息的批量爬取。该工具主要检测网站的基本信息、状态码、网站标题以及可能存在的备案信息。此外，项目还支持调用第三方 API 获取网站的备案信息，包括 ICP 备案和网安备案等单位或个人信息。</strong></p>
+<h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><ol>
+<li><strong>批量网站检测：</strong> 该工具主要用于批量检测多个网站的基本信息，包括网站标题、状态码、底部悬挂的 ICP 备案信息和网安备案信息等。用户可以通过输入 Excel 表格路径，将待检测的网站列在表格的第一列中。</li>
+<li><strong>多线程和异步请求：</strong> 采用多线程和异步请求的技术，实现对多个网站的并发检测，提高检测效率。用户可以根据需求设置最大线程数，以适应不同的网络环境和性能需求。</li>
+<li><strong>API 调用功能：</strong> 工具内置了 API 调用功能，用户可以选择是否开启。通过调用第三方服务商的 API，获取更详细的 ICP 备案和网安备案等信息，进一步丰富了网站检测的数据。</li>
+<li><strong>友好的图形用户界面（GUI）:</strong> 工具采用 PySide6 库构建图形用户界面，提供直观、易用的操作界面。用户可以通过简单的按钮操作完成网站检测，并实时查看检测进度和结果。</li>
+<li><strong>超时时间和验证设置：</strong> 用户可以根据实际情况设置超时时间，以避免因网站响应过慢导致的程序阻塞。同时，支持用户选择是否验证 SSL 证书，以适应不同网络环境，提示满足不同的需求。</li>
+<li><strong>结果导出：</strong> 工具在检测完成后，将结果输出到 Excel 文件中，方便用户查看和分析。用户可以通过 Excel 文件快速了解每个网站的基本信息，以及是否存在异常情况，同时也可以判断网站是否违规违法。</li>
+<li><strong>更新检查：</strong> 提供更新检查功能，用户可以通过工具查看是否有新版本发布。在有新版本可用时，用户可以选择立即更新，以获取更好的功能和性能。</li>
+<li><strong>开源地址和使用介绍：</strong> 工具提供了开源地址和使用介绍的链接，用户可以通过这些链接获取更多关于工具的信息、源代码以及使用方法。这有助于用户更全面地了解和使用工具。</li>
+<li><strong>ICP 备案和网安备案解析：</strong> 对通过 API 获取的 ICP 备案和网安备案信息进行解析，提取关键信息并展示给用户。这样用户可以更方便地了解网站的备案情况。</li>
+<li><strong>用户反馈和建议：</strong> 提供用户反馈和建议的渠道，鼓励用户在使用过程中发现问题或有改进建议时积极反馈。用户的反馈将有助于工具的不断优化和改进。</li>
+</ol>
+<p><strong>通过以上主要功能，该网站批量检测工具旨在为用户提供一种便捷、高效、可视化的方式，帮助用户快速获取多个网站的基本信息，同时保持灵活性和可定制性，以适应不同用户和场景的需求。</strong></p>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><ol>
+<li><strong>网信工作者</strong>：可以经常批量检测网站情况，及时发现违法网站并对使其整改。</li>
+<li><strong>网站管理者：</strong> 用用于定期批量检测网站状态，及时发现异常情况。</li>
+<li><strong>数据分析人员：</strong> 提供了对大规模网站数据进行批量处理和分析的能力。</li>
+</ol>
+<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><ol>
+<li><strong>启动应用程序</strong>： 双击运行打包后的应用程序，启动应用程序后，会看到一个图形用户界面（GUI）窗口弹出。</li>
+<li><strong>导入 URL 列表</strong>： 在应用程序窗口中，有一个按钮或菜单项，用于导入包含待检测 URL 的 Excel 文件。点击该按钮或选择相应的菜单项，然后选择要导入的 Excel 文件。系统会读取文件中的 URL 列表。<ul>
+<li><strong>注意：请将表格文件中第一列放置 URL，且从第一行开始。</strong></li>
+</ul>
+</li>
+<li><strong>配置检测参数</strong> ： 配置检测参数，如超时时间、最大重试次数等，同时确定是否开启 icp 备案和网安备案信息获取。</li>
+<li><strong>执行备案信息检测和网站判断</strong>： 类似于 ICP 备案检测，应用程序可能提供了执行公安备案检测的按钮或菜单项。点击该按钮，系统将访问每个 URL，尝试获取其公安备案信息。结果可能显示在界面上或保存到 Excel 文件中。</li>
+<li><strong>查看和导出结果：</strong> 完成 ICP 备案和公安备案检测时，会在日志界面上显示结果摘要。包括每个 URL 的备案信息。此外，最终检测结果都会导出至 Excel 文件中，用户可查看并导出，以便进一步分析或备份。</li>
+<li><strong>关闭应用程序：</strong> 完成所有操作后，可以通过关闭应用程序窗口来退出程序。。</li>
+</ol>
+<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul>
+<li><strong>Python：</strong> 项目主要使用 Python 语言进行开发。</li>
+<li><strong>PySide6：</strong> 用于构建图形用户界面。</li>
+<li><strong>Requests、Aiohttp、Httpx：</strong> 用于进行同步和异步的 HTTP 请求。</li>
+<li><strong>BeautifulSoup：</strong> 用于解析网页内容。</li>
+<li><strong>Openpyxl：</strong> 用于 Excel 文件的读写。</li>
+<li><strong>ThreadPoolExecutor：</strong> 用于实现多线程处理。</li>
+<li><strong>Fake User-Agent：</strong> 用于生成随机 User-Agent，增加请求的随机性。</li>
+</ul>
+<h2 id="未来计划"><a href="#未来计划" class="headerlink" title="未来计划"></a>未来计划</h2><ol>
+<li><strong>性能优化与稳定性提升</strong>： 不断优化爬虫代码，提高程序的稳定性和执行效率，确保在处理大规模数据时仍能保持良好的性能。</li>
+<li><strong>用户界面优化与友好化</strong>： 进一步改进图形化界面，提升用户体验，增加更多直观的操作提示和反馈信息，使工具更加易用。</li>
+<li><strong>配置选项</strong>： 增加更多的配置选项，提供更灵活的检测方案。</li>
+<li><strong>功能拓展与定制化</strong>： 考虑添加更多实用的功能模块，比如定时任务、自定义规则筛选、结果导出等，以满足用户在实际工作中的多样化需求。</li>
+<li><strong>社区反馈与更新</strong>： 鼓励用户提供反馈意见和建议，及时修复和更新工具，确保它始终适应网络环境和政策法规的变化</li>
+<li><strong>添加更多异常网站的识别规则。</strong></li>
+<li><strong>增加日志记录，方便用户跟踪程序执行过程。</strong></li>
+</ol>
+<h2 id="反馈与贡献"><a href="#反馈与贡献" class="headerlink" title="反馈与贡献"></a>反馈与贡献</h2><p><strong>如果您有任何建议、反馈或者愿意为项目做贡献，请随时联系我。欢迎您的参与，让这个工具变得更加完善！</strong></p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li><strong>使用合法性：</strong> 该网站批量检测工具仅供合法用途使用，用户在使用过程中需确保遵守所在国家 &#x2F; 地区的法规和政策。禁止使用该工具进行非法活动。</li>
+<li><strong>免责声明：</strong> 本工具对使用者的行为概不负责，由用户个人或单位使用该工具所产生的任何法律责任和风险均由用户自行承担。开发者对工具的使用不承担任何连带责任。</li>
+<li><strong>隐私保护：</strong> 用户使用该工具时，应当自行确保所获取的网站信息的使用符合隐私保护法规。开发者不对用户通过本工具获取的网站信息的隐私合规性承担责任。</li>
+<li><strong>第三方服务：</strong> 本工具使用了第三方服务、API 等，用户在使用过程中应仔细阅读和遵守相关服务协议，开发者对第三方服务可能带来的影响概不负责。</li>
+<li><strong>免责声明变更：</strong> 开发者保留随时更改、修订或更新本免责声明的权利。用户在使用工具的过程中应定期查阅最新版本的免责声明。</li>
+<li><strong>技术风险：</strong> 本工具使用了多线程、异步请求等技术，尽管经过精心设计和多次测试，但在使用时仍可能存在一定的技术风险。用户在使用前应当理解可能的技术风险，并自行承担因技术问题可能带来的损失。</li>
+<li><strong>无担保声明：</strong> 本工具按现状提供，开发者不提供任何明示或暗示的担保，包括但不限于对工具的适用性、准确性、可靠性、完整性、及时性等方面的担保。用户在使用本工具时应自行承担相应风险。</li>
+<li><strong>联系方式：</strong> 如有任何关于使用本工具的疑问、建议或问题，请通过工具提供的联系方式与开发者取得联系。</li>
+</ol>
+<p><strong>通过使用网站批量检测工具，即表示您已阅读、理解并同意上述免责声明的全部内容。如不同意上述免责声明的任一条款，请立即停止使用该工具。</strong></p>
+<p><strong>下载地址：</strong><a target="_blank" rel="noopener" href="https://github.com/mBigFish/web_scan">https://github.com/mBigFish/web_scan</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.mbigfish.com">mBigFish</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://blog.mbigfish.com/archives/1725241458891/">http://blog.mbigfish.com/archives/1725241458891/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://blog.mbigfish.com" target="_blank">大鱼博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%BC%80%E5%8F%91/">开发</a></div><div class="post-share"><div class="social-share" data-image="https://www.dmoe.cc/random.php" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/archives/1725242614801/" title="MacBookAirM1安装冰蝎v4.1"><img class="cover" src="/../../images/MacBookAirM1%E5%AE%89%E8%A3%85%E5%86%B0%E8%9D%8Ev4.1/image-20240902095729820783.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">MacBookAirM1安装冰蝎v4.1</div></div><div class="info-2"><div class="info-item-1">MacBookAirM1安装冰蝎v4.1前言： 在使用 MacBook 安装一些渗透测试工具时，对于 webshell 管理工具安装很是麻烦，对于 菜刀 蚁剑，似乎都没有适合 mac 的版本，好像也只有冰蝎才适用于 MacBook，但是在安装时，因为冰蝎的更新，取消了内置 javafx 框架版本，导致 M1 不兼容此版本，于是在网上搜索解决办法，但是都没有具体的解决方法，于是总结网上的教程以及 GitHub 上的反馈，写出此教程。 在运行时报以下错误，便是缺少 javafx 内置库，按此教程操作即可。  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697java -jar Behinder.jar12月 1, 2023 12:59:33 下午...</div></div></div></a><a class="pagination-related" href="/archives/1724656843524/" title="Typora上传图片至Halo博客&amp;&amp;Python添加水印"><img class="cover" src="/../../images/Typora%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%87%B3Halo%E5%8D%9A%E5%AE%A2&amp;&amp;Python%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/image-20240827002935864870-0959585.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Typora上传图片至Halo博客&&Python添加水印</div></div><div class="info-2"><div class="info-item-1">Typora上传图片至Halo博客&amp;&amp;Python添加水印一、背景 前几天打算重新开一个博客，原因是 ***************，然后选来选取最后选择了halo框架博客，由于我喜欢用typora写博客，然后在复制到博客里，所以涉及到以下两个问题 一是：halo博客在粘贴typora内容时，截图不会上传，导致需要一个个的手动粘贴图片，肉眼可见麻烦，于是在网上找了一下关于批量粘贴图片插件，发现没有，又在网上找了很多相关教程，最后发现了一篇文章，可以参考一下（使用 Halo 作为 Typora 图床）。 二是：就在今天，无意发现有很多人搬运我的博客内容时，文章下面都不给我一个外链或者说明，于是我就想在博客上传图片时想添加一个水印，于是又去找相关插件，发现还是没有，突然联系到第一个问题中本来就是上传图片时用typora执行自定义命令，就是python代码实现的，那么添加水印同样可以使用python完成，于是又在网上找python添加水印文章，试了几个代码发现都有问题，可能是时间久了，有些功能已经弃用了，于是干脆自己写了一个。  二、Typora上传图片（一）安装...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/archives/1726220765387/" title="【开发】病毒样本（md5）信息批量查询工具"><img class="cover" src="/../../images/%E3%80%90%E5%BC%80%E5%8F%91%E3%80%91%E7%97%85%E6%AF%92%E6%A0%B7%E6%9C%AC%EF%BC%88md5%EF%BC%89%E4%BF%A1%E6%81%AF%E6%89%B9%E9%87%8F%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7/image-20240913174434114550-0961215.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-13</div><div class="info-item-2">【开发】病毒样本（md5）信息批量查询工具</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E6%89%B9%E9%87%8F%E6%A3%80%E6%B5%8B%E5%B7%A5%E5%85%B7-V1-0-2"><span class="toc-text">网站批量检测工具 V1.0.2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E8%83%8C%E6%99%AF"><span class="toc-text">开发背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%BF%B0"><span class="toc-text">项目概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="toc-text">主要功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">使用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4"><span class="toc-text">使用步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="toc-text">技术栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AA%E6%9D%A5%E8%AE%A1%E5%88%92"><span class="toc-text">未来计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E9%A6%88%E4%B8%8E%E8%B4%A1%E7%8C%AE"><span class="toc-text">反馈与贡献</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">注意事项</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-color: rgb(240, 243, 244);"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By mBigFish</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/publish/query/indexFirst.action"> <span>宁ICP备2022000140号-3</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
