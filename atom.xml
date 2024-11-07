@@ -250,9 +250,9 @@
     
     
     
-    <category term="问题解决" scheme="http://blog.mbigfish.com/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
-    
     <category term="linux" scheme="http://blog.mbigfish.com/categories/linux/"/>
+    
+    <category term="问题解决" scheme="http://blog.mbigfish.com/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
     
     
     <category term="归纳" scheme="http://blog.mbigfish.com/tags/%E5%BD%92%E7%BA%B3/"/>
@@ -271,9 +271,9 @@
     
     
     
-    <category term="工具使用" scheme="http://blog.mbigfish.com/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
-    
     <category term="linux" scheme="http://blog.mbigfish.com/categories/linux/"/>
+    
+    <category term="工具使用" scheme="http://blog.mbigfish.com/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
     
     
     <category term="笔记" scheme="http://blog.mbigfish.com/tags/%E7%AC%94%E8%AE%B0/"/>
