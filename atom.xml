@@ -271,9 +271,9 @@
     
     
     
-    <category term="linux" scheme="http://blog.mbigfish.com/categories/linux/"/>
-    
     <category term="工具使用" scheme="http://blog.mbigfish.com/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    
+    <category term="linux" scheme="http://blog.mbigfish.com/categories/linux/"/>
     
     
     <category term="笔记" scheme="http://blog.mbigfish.com/tags/%E7%AC%94%E8%AE%B0/"/>
@@ -357,9 +357,9 @@
     
     
     
-    <category term="python" scheme="http://blog.mbigfish.com/categories/python/"/>
-    
     <category term="思路" scheme="http://blog.mbigfish.com/categories/%E6%80%9D%E8%B7%AF/"/>
+    
+    <category term="python" scheme="http://blog.mbigfish.com/categories/python/"/>
     
     
     <category term="原创" scheme="http://blog.mbigfish.com/tags/%E5%8E%9F%E5%88%9B/"/>

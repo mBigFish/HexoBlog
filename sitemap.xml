@@ -164,7 +164,7 @@
   </url>
   
   <url>
-    <loc>http://blog.mbigfish.com/categories/index.html</loc>
+    <loc>http://blog.mbigfish.com/tags/index.html</loc>
     
     <lastmod>2024-11-01</lastmod>
     
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>http://blog.mbigfish.com/tags/index.html</loc>
+    <loc>http://blog.mbigfish.com/categories/index.html</loc>
     
     <lastmod>2024-11-01</lastmod>
     
@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>http://blog.mbigfish.com/tags/%E6%90%AC%E7%A0%96/</loc>
+    <loc>http://blog.mbigfish.com/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2024-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.mbigfish.com/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://blog.mbigfish.com/tags/%E6%90%AC%E7%A0%96/</loc>
     <lastmod>2024-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -235,20 +235,6 @@
   </url>
   
   <url>
-    <loc>http://blog.mbigfish.com/categories/linux/</loc>
-    <lastmod>2024-11-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.mbigfish.com/categories/%E6%90%AD%E5%BB%BA%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2024-11-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.mbigfish.com/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2024-11-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -256,7 +242,7 @@
   </url>
   
   <url>
-    <loc>http://blog.mbigfish.com/categories/python/</loc>
+    <loc>http://blog.mbigfish.com/categories/linux/</loc>
     <lastmod>2024-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -270,7 +256,14 @@
   </url>
   
   <url>
-    <loc>http://blog.mbigfish.com/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/</loc>
+    <loc>http://blog.mbigfish.com/categories/python/</loc>
+    <lastmod>2024-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.mbigfish.com/categories/%E6%90%AD%E5%BB%BA%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2024-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -278,6 +271,13 @@
   
   <url>
     <loc>http://blog.mbigfish.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
+    <lastmod>2024-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.mbigfish.com/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/</loc>
     <lastmod>2024-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
