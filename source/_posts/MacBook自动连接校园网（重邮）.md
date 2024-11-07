@@ -1,7 +1,11 @@
 ---
 title: MacBook自动连接校园网（重邮）
 date: 2024-10-31 15:00:33
-tags:
+cover: ../images/MacBook自动连接校园网（重邮）/image-20241026125345741.png
+categories: 
+ - [思路]
+tags: 
+ - 原创
 ---
 
 # MacBook自动连接校园网（重邮）

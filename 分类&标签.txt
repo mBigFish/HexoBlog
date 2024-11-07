@@ -1,4 +1,4 @@
-分类：
+categories
 	搭建安装
 	工具使用
 	python
@@ -10,8 +10,14 @@
 	其他
 	
 	
-标签
+tags
 	归纳
 	笔记
 	搬砖
 	原创
+	开发
+
+
+git add .
+git commit -m "更新了部分代码"
+git push
