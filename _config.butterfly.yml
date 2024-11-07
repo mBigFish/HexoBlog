@@ -91,7 +91,7 @@ category_img:
 category_per_img: ../mainimg/background1.png
 
 # The background image of footer
-footer_img: rgb(240, 243, 244) 
+footer_img: true
 
 # Website Background
 # Can set it to color or image url
@@ -472,7 +472,7 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use:
+  use: local_search
   placeholder:
 
   # Algolia Search
@@ -482,8 +482,10 @@ search:
 
   # Local Search
   local_search:
+    enable: true
+
     # Preload the search data when the page loads.
-    preload: false
+    preload: true
     # Show top n results per article, show all results by setting to -1
     top_n_per_article: 1
     # Unescape html strings to the readable one.

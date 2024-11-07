@@ -15,7 +15,7 @@ timezone: ''
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://blog.mbigfish.com
 # permalink: :year/:month/:day/:title/
-permalink: :title/
+permalink: archives/:year:month:day:hour:minute.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -105,3 +105,33 @@ deploy:
   type: git
   repo: git@81.70.250.151:/home/repo/blog.git
   branch: master
+
+# 搜索
+search: 
+  path: search.xml
+  field: post
+
+# 外链跳转插件
+hexo_external_link:
+  enable: true
+  enable_base64_encode: true
+  url_param_name: 'u'
+  html_file_name: 'go.html'
+  target_blank: true
+  link_rel: 'external nofollow noopener noreferrer'
+  domain: 'your_domain' # 如果开启了防盗链
+  safety_chain: true
+
+# rss订阅插件
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
