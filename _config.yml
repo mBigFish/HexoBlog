@@ -103,8 +103,11 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@81.70.250.151:/home/repo/blog.git
+  repo: 
+    vps: git@81.70.250.151:/home/repo/blog.git
+    # github: git@github.com:mbigfish/HexoBlog.git  # GitHub 仓库
   branch: master
+  
 
 # 搜索
 search: 
@@ -138,6 +141,6 @@ feed:
 
 # 图片懒加载
 lazyload: 
-	enable: true # 是否开启图片懒加载 
+	enable: false # 是否开启图片懒加载 
 	onlypost: false # 是否只对文章的图片做懒加载 
-	loadingImg: /medias/loading.gif #显示的图片
+	loadingImg: /mainimg/loading.gif #显示的图片
