@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>大鱼博客</title>
+  <icon>http://blog.mbigfish.com/icon.png</icon>
+  <subtitle>mBigFish</subtitle>
+  <link href="http://blog.mbigfish.com/atom.xml" rel="self"/>
+  
+  <link href="http://blog.mbigfish.com/"/>
+  <updated>2024-11-07T06:30:14.115Z</updated>
+  <id>http://blog.mbigfish.com/</id>
+  
+  <author>
+    <name>mBigFish</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MacBook自动连接校园网（重邮）</title>
+    <link href="http://blog.mbigfish.com/archives/202410311500.html"/>
+    <id>http://blog.mbigfish.com/archives/202410311500.html</id>
+    <published>2024-10-31T07:00:33.000Z</published>
+    <updated>2024-11-07T06:30:14.115Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;MacBook自动连接校园网（重邮）&quot;&gt;&lt;a href=&quot;#MacBook自动连接校园网（重邮）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="思路" scheme="http://blog.mbigfish.com/categories/%E6%80%9D%E8%B7%AF/"/>
+    
+    
+    <category term="原创" scheme="http://blog.mbigfish.com/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【开发】病毒样本（md5）信息批量查询工具</title>
+    <link href="http://blog.mbigfish.com/archives/1726220765387/"/>
+    <id>http://blog.mbigfish.com/archives/1726220765387/</id>
+    <published>2024-09-13T09:46:05.000Z</published>
+    <updated>2024-11-07T06:35:38.823Z</updated>
+    
+    
+    <summary type="html">【开发】病毒样本(md5)信息批量查询工具 （Get_Md5_Information） 一、项目简介 这款工具是当时实习时候写的一款工具，在实习过程中本来一直都是直接运行python的，功能也比较简单，后来快要离职时候才写成图形化界面的，并且补充完善了一些功能，其实还有启明星辰和vt的代码，但当时比</summary>
+    
+    
+    
+    <category term="python" scheme="http://blog.mbigfish.com/categories/python/"/>
+    
+    <category term="工具推荐" scheme="http://blog.mbigfish.com/categories/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="开发" scheme="http://blog.mbigfish.com/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu美化</title>
+    <link href="http://blog.mbigfish.com/archives/1725293178393/"/>
+    <id>http://blog.mbigfish.com/archives/1725293178393/</id>
+    <published>2024-09-02T16:06:19.000Z</published>
+    <updated>2024-11-07T06:45:33.223Z</updated>
+    
+    
+    <summary type="html">ubuntu美化 一：更新源 sudo apt-get updatesudo apt-get upgrade 二：下载 1、执行：sudo apt install gnome-tweaks chrome-gnome-shell2、执行：apt install gtk2-engines-</summary>
+    
+    
+    
+    <category term="linux" scheme="http://blog.mbigfish.com/categories/linux/"/>
+    
+    
+    <category term="归纳" scheme="http://blog.mbigfish.com/tags/%E5%BD%92%E7%BA%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>rdesktop连接Windows远程桌面因CredSSP报错解决办法</title>
+    <link href="http://blog.mbigfish.com/archives/1725292972631/"/>
+    <id>http://blog.mbigfish.com/archives/1725292972631/</id>
+    <published>2024-09-02T16:02:53.000Z</published>
+    <updated>2024-11-07T06:24:09.736Z</updated>
+    
+    
+    <summary type="html">rdesktop连接Windows远程桌面因CredSSP报错解决办法 一、问题 今天在使用 kali 工具 rdesktop 连接 windows 远程桌面时，遇到以下报错问题 Core(warning) Certificate received from server is NOT trus</summary>
+    
+    
+    
+    <category term="问题解决" scheme="http://blog.mbigfish.com/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+    <category term="工具使用" scheme="http://blog.mbigfish.com/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    
+    
+    <category term="归纳" scheme="http://blog.mbigfish.com/tags/%E5%BD%92%E7%BA%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sub-web订阅转换面板的搭建教程</title>
+    <link href="http://blog.mbigfish.com/archives/1725292309858/"/>
+    <id>http://blog.mbigfish.com/archives/1725292309858/</id>
+    <published>2024-09-02T15:51:52.000Z</published>
+    <updated>2024-11-07T06:13:48.604Z</updated>
+    
+    
+    <summary type="html">sub-web订阅转换面板的搭建教程 一、Sub-Web 前端搭建 项目地址：https//github.com/CareyWang/sub-web （一）安装 docker</summary>
+    
+    
+    
+    <category term="搭建安装" scheme="http://blog.mbigfish.com/categories/%E6%90%AD%E5%BB%BA%E5%AE%89%E8%A3%85/"/>
+    
+    
+    <category term="笔记" scheme="http://blog.mbigfish.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>proxy_pool安装教程（代理池搭建）</title>
+    <link href="http://blog.mbigfish.com/archives/1725291935213/"/>
+    <id>http://blog.mbigfish.com/archives/1725291935213/</id>
+    <published>2024-09-02T15:45:36.000Z</published>
+    <updated>2024-11-07T06:46:40.551Z</updated>
+    
+    
+    <summary type="html">proxy_pool安装教程（代理池搭建） 一、安装 docker</summary>
+    
+    
+    
+    <category term="搭建安装" scheme="http://blog.mbigfish.com/categories/%E6%90%AD%E5%BB%BA%E5%AE%89%E8%A3%85/"/>
+    
+    
+    <category term="归纳" scheme="http://blog.mbigfish.com/tags/%E5%BD%92%E7%BA%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>burpsuit安装证书</title>
+    <link href="http://blog.mbigfish.com/archives/202409022341.html"/>
+    <id>http://blog.mbigfish.com/archives/202409022341.html</id>
+    <published>2024-09-02T15:41:31.000Z</published>
+    <updated>2024-11-04T04:51:28.294Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;burpsuit安装证书&quot;&gt;&lt;a href=&quot;#burpsuit安装证书&quot; class=&quot;headerlink&quot; title=&quot;burpsuit安装证书&quot;&gt;&lt;/a&gt;burpsuit安装证书&lt;/h1&gt;&lt;h2 id=&quot;一、原因&quot;&gt;&lt;a href=&quot;#一、原因&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="工具使用" scheme="http://blog.mbigfish.com/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    
+    
+    <category term="原创" scheme="http://blog.mbigfish.com/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kali全局菜单安装（Fildem安装）</title>
+    <link href="http://blog.mbigfish.com/archives/202409022148.html"/>
+    <id>http://blog.mbigfish.com/archives/202409022148.html</id>
+    <published>2024-09-02T13:48:11.000Z</published>
+    <updated>2024-11-01T08:55:44.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;kali全局菜单安装-Fildem安装）&quot;&gt;&lt;a href=&quot;#kali全局菜单安装-Fildem安装）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="http://blog.mbigfish.com/categories/linux/"/>
+    
+    <category term="搭建安装" scheme="http://blog.mbigfish.com/categories/%E6%90%AD%E5%BB%BA%E5%AE%89%E8%A3%85/"/>
+    
+    
+    <category term="原创" scheme="http://blog.mbigfish.com/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typecho不用进入后台如何关闭已启用的插件</title>
+    <link href="http://blog.mbigfish.com/archives/202409022142.html"/>
+    <id>http://blog.mbigfish.com/archives/202409022142.html</id>
+    <published>2024-09-02T13:42:26.000Z</published>
+    <updated>2024-11-01T08:55:44.000Z</updated>
+    
+    
+    <summary type="html">Typecho不用进入后台如何关闭已启用的插件 一：前言 前一段时间，我给 typecho 想换个后台主题，于是搜索安装了一个插件，但是在它安装后，起用这个这个插件的时候发现网站后台无法登陆了。 所以想要解决这个问题，就需要关闭这个插件。 二：解决方法 我网上看了半天 typecho 的数据库终于发</summary>
+    
+    
+    
+    <category term="问题解决" scheme="http://blog.mbigfish.com/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+    
+    <category term="原创" scheme="http://blog.mbigfish.com/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu快速安装MSF的命令</title>
+    <link href="http://blog.mbigfish.com/archives/202409022138.html"/>
+    <id>http://blog.mbigfish.com/archives/202409022138.html</id>
+    <published>2024-09-02T13:38:24.000Z</published>
+    <updated>2024-11-01T08:55:44.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Ubuntu快速安装MSF的命令&quot;&gt;&lt;a href=&quot;#Ubuntu快速安装MSF的命令&quot; class=&quot;headerlink&quot; title=&quot;Ubuntu快速安装MSF的命令&quot;&gt;&lt;/a&gt;Ubuntu快速安装MSF的命令&lt;/h1&gt;&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="http://blog.mbigfish.com/categories/linux/"/>
+    
+    <category term="搭建安装" scheme="http://blog.mbigfish.com/categories/%E6%90%AD%E5%BB%BA%E5%AE%89%E8%A3%85/"/>
+    
+    
+    <category term="搬砖" scheme="http://blog.mbigfish.com/tags/%E6%90%AC%E7%A0%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kali连接蓝牙</title>
+    <link href="http://blog.mbigfish.com/archives/1725244920854/"/>
+    <id>http://blog.mbigfish.com/archives/1725244920854/</id>
+    <published>2024-09-02T02:42:01.000Z</published>
+    <updated>2024-11-07T06:42:04.155Z</updated>
+    
+    
+    <summary type="html">kali 连接蓝牙 一、启动蓝牙服务 Kali Linux 默认状态下并没有启动蓝牙服务，如果尝试打开蓝牙管理器会提示 Bluez 守护进程没有运行，不能继续。应用下列指令开启蓝牙服务： sudo service bluetooth start 二、配对设备 开启蓝牙服务后右上角状态栏出现了蓝牙图</summary>
+    
+    
+    
+    <category term="问题解决" scheme="http://blog.mbigfish.com/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+    <category term="linux" scheme="http://blog.mbigfish.com/categories/linux/"/>
+    
+    
+    <category term="归纳" scheme="http://blog.mbigfish.com/tags/%E5%BD%92%E7%BA%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux安装v2ray</title>
+    <link href="http://blog.mbigfish.com/archives/1725244431165/"/>
+    <id>http://blog.mbigfish.com/archives/1725244431165/</id>
+    <published>2024-09-02T02:33:51.000Z</published>
+    <updated>2024-11-07T06:20:51.518Z</updated>
+    
+    
+    <summary type="html">Linux安装v2ray 一、下载与安装 v2rayA 的功能依赖于 V2Ray 内核，因此需要安装内核。 （一）安装 V2Ray 内核 / Xray 内核 1.V2Ray / Xray 的官方脚本 V2Ray 安装参考：https//github.com/v2fly/fhs-install-v2</summary>
+    
+    
+    
+    <category term="linux" scheme="http://blog.mbigfish.com/categories/linux/"/>
+    
+    <category term="工具使用" scheme="http://blog.mbigfish.com/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    
+    
+    <category term="笔记" scheme="http://blog.mbigfish.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kali linux 上安装 NVIDIA 驱动程序</title>
+    <link href="http://blog.mbigfish.com/archives/1725243406467/"/>
+    <id>http://blog.mbigfish.com/archives/1725243406467/</id>
+    <published>2024-09-02T02:16:46.000Z</published>
+    <updated>2024-11-07T06:43:24.371Z</updated>
+    
+    
+    <summary type="html">kali linux 上安装 NVIDIA 驱动程序 一、更新系统 sudo apt updatesudo apt -y full-upgradesudo apt -y autoremovereboot 二、查看已安装的显卡，并验证是否用 Nouveau 开源驱动程序 lspci | gre</summary>
+    
+    
+    
+    <category term="linux" scheme="http://blog.mbigfish.com/categories/linux/"/>
+    
+    
+    <category term="归纳" scheme="http://blog.mbigfish.com/tags/%E5%BD%92%E7%BA%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MacBookAirM1安装冰蝎v4.1</title>
+    <link href="http://blog.mbigfish.com/archives/1725242614801/"/>
+    <id>http://blog.mbigfish.com/archives/1725242614801/</id>
+    <published>2024-09-02T02:03:34.000Z</published>
+    <updated>2024-11-07T06:26:10.857Z</updated>
+    
+    
+    <summary type="html">MacBookAirM1安装冰蝎v4.1 前言： 在使用 MacBook 安装一些渗透测试工具时，对于 webshell 管理工具安装很是麻烦，对于 菜刀 蚁剑，似乎都没有适合 mac 的版本，好像也只有冰蝎才适用于 MacBook，但是在安装时，因为冰蝎的更新，取消了内置 javafx 框</summary>
+    
+    
+    
+    <category term="问题解决" scheme="http://blog.mbigfish.com/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+    
+    <category term="原创" scheme="http://blog.mbigfish.com/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【开发】网站批量检测工具 V1.0.2</title>
+    <link href="http://blog.mbigfish.com/archives/1725241458891/"/>
+    <id>http://blog.mbigfish.com/archives/1725241458891/</id>
+    <published>2024-09-02T01:44:18.000Z</published>
+    <updated>2024-11-07T06:39:54.179Z</updated>
+    
+    
+    <summary type="html">网站批量检测工具 V1.0.2 开发背景 在本人实习期间，面临了对大量本地网站进行备案信息和内容合规性检查的挑战。这些网站的数量巨大，而手动检查方法耗时且容易遗漏，特别是在频繁变化的网络环境中。同时，由于网站运营状况的不断变化，以及黑客入侵的不定时等不可预测的情况，需要及时而有效地监测网站状态。 面</summary>
+    
+    
+    
+    <category term="工具使用" scheme="http://blog.mbigfish.com/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    
+    <category term="网络安全" scheme="http://blog.mbigfish.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="开发" scheme="http://blog.mbigfish.com/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【原创】x-ui面板爬虫爬取及登陆分享</title>
+    <link href="http://blog.mbigfish.com/archives/202408312115.html"/>
+    <id>http://blog.mbigfish.com/archives/202408312115.html</id>
+    <published>2024-08-31T13:15:18.000Z</published>
+    <updated>2024-11-07T09:57:59.382Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;x-ui面板爬虫爬取及登陆分享&quot;&gt;&lt;a href=&quot;#x-ui面板爬虫爬取及登陆分享&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="思路" scheme="http://blog.mbigfish.com/categories/%E6%80%9D%E8%B7%AF/"/>
+    
+    <category term="python" scheme="http://blog.mbigfish.com/categories/python/"/>
+    
+    
+    <category term="原创" scheme="http://blog.mbigfish.com/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typora上传图片至Halo博客&amp;&amp;Python添加水印</title>
+    <link href="http://blog.mbigfish.com/archives/1724656843524/"/>
+    <id>http://blog.mbigfish.com/archives/1724656843524/</id>
+    <published>2024-08-26T07:20:44.000Z</published>
+    <updated>2024-11-07T06:10:00.051Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Typora上传图片至Halo博客-Python添加水印&quot;&gt;&lt;a href=&quot;#Typora上传图片至Halo博客-Python添加水印&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="问题解决" scheme="http://blog.mbigfish.com/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    
+    <category term="python" scheme="http://blog.mbigfish.com/categories/python/"/>
+    
+    
+    <category term="原创" scheme="http://blog.mbigfish.com/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>密探渗透测试工具</title>
+    <link href="http://blog.mbigfish.com/archives/1724651092426/"/>
+    <id>http://blog.mbigfish.com/archives/1724651092426/</id>
+    <published>2024-08-26T05:44:52.000Z</published>
+    <updated>2024-11-07T06:15:58.259Z</updated>
+    
+    
+    <summary type="html">密探 -- 渗透测试工具 一、功能特性 密探-主要包含 资产信息收集， IP端口查询 备案信息查询 子域名爆破（支持多级递归） 搜索引擎语法自动生成（FOFA,Hunter,Quake,ZoomEye,google,github 资产测绘（FOFA，hunter，Quake，ZoomEye 的查询及</summary>
+    
+    
+    
+    <category term="工具使用" scheme="http://blog.mbigfish.com/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    
+    
+    <category term="原创" scheme="http://blog.mbigfish.com/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
+  
+</feed>
