@@ -1,0 +1,23 @@
+categories
+	搭建安装
+	工具使用
+	python
+	Linux
+	问题解决
+	渗透测试
+	网络安全
+	思路
+	其他
+	
+	
+tags
+	归纳
+	笔记
+	搬砖
+	原创
+	开发
+
+
+git add .
+git commit -m "更新了部分代码"
+git push
