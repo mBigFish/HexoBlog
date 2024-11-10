@@ -8,6 +8,8 @@ categories:
 tag: 归纳
 ---
 
+# DDNS-GO教程
+
 #### 准备
 
 - 首先确保有ipv6

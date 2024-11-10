@@ -17,11 +17,12 @@ nav:
   fixed: false
 
 menu:
+  前博客: /link/ || fas fa-link
   首页: / || fas fa-home
   时光:  /archives/  ||  fas  fa-archive 
   标签:  /tags/  ||  fas  fa-tags 
   分类:  /categories/  ||  fas  fa-folder-open 
-  友链: /link/ || fas fa-link
+  # 友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
 
@@ -291,7 +292,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/mbigfish
   card_announcement:
     enable: true
     content: This is my Blog
@@ -427,7 +428,7 @@ copy:
 
 # Need to install the hexo-wordcount plugin
 wordcount:
-  enable: false
+  enable: true
   # Display the word count of the article in post meta
   post_wordcount: true
   # Display the time to read the article in post meta
@@ -680,7 +681,8 @@ crisp:
 # --------------------------------------
 
 # https://tongji.baidu.com/web/welcome/login
-baidu_analytics:
+baidu_analytics: 3e97b543367b7e6895efe7f7bc992537
+
 
 # https://analytics.google.com/analytics/web/
 google_analytics:
@@ -990,7 +992,7 @@ snackbar:
 
 # Instant.page
 # https://instant.page/
-instantpage: false
+instantpage: true
 
 # Pangu - Insert a space between Chinese character and English character
 # https://github.com/vinta/pangu.js
