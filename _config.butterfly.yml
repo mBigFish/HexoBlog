@@ -155,7 +155,7 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect
   effect: true
   # Customize typed.js
@@ -171,6 +171,7 @@ subtitle:
   source: false
   # If you close the typewriter effect, the subtitle will only show the first line of sub
   sub:
+   - 让花成花 让树成树
 
 # Article layout on the homepage
 # 1: Cover on the left, info on the right
@@ -180,7 +181,7 @@ subtitle:
 # 5: Info displayed on the cover
 # 6: Masonry layout - Cover on top, info on the bottom
 # 7: Masonry layout - Info displayed on the cover
-index_layout: 3
+index_layout: 4
 
 # Display the article introduction on homepage
 # 1: description
@@ -264,7 +265,7 @@ noticeOutdate:
 footer:
   owner:
     enable: true
-    since: 2019
+    since: 2021
   custom_text: <a href="http://beian.miit.gov.cn/publish/query/indexFirst.action"> <span>宁ICP备2022000140号-3</span></a>
   # Copyright of theme and framework
   copyright: true
@@ -321,7 +322,7 @@ aside:
     enable: true
     # If set 0 will show all
     limit: 40
-    color: false
+    color: true
     # Order of tags, random/name/length
     orderby: random
     # Sort of order. 1, asc for ascending; -1, desc for descending
